@@ -1,0 +1,44 @@
+body {
+  background: #f6f7f6;
+  color: #2b5a4c;
+  font-family: 'Bitter', serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.masthead {
+  background: #75d9ad;
+  color: #000;
+  height: 640px;
+  h1 {
+    background: url('../images/logo.png') transparent 0 0 no-repeat;
+    height: 121px;
+    margin: 0 auto;
+    text-indent: -99999px;
+    width: 362px;
+  }
+  &::after {
+    content: "";
+    background: url('../images/logo.png') transparent bottom 0 no-repeat;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.info {
+  ul {
+    margin: 20px 0;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
