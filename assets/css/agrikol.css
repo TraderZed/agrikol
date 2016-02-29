@@ -21,6 +21,13 @@ body {
     position: relative;
     text-indent: -99999px;
     width: 362px; }
+  .masthead ul {
+    margin: 20px 0;
+    padding: 0 20px; }
+    .masthead ul li {
+      display: inline-block;
+      letter-spacing: 2px;
+      margin: 0 10px; }
   .masthead::after {
     content: "";
     background-image: url("../images/masthead.jpg");
@@ -37,9 +44,18 @@ body {
 .info {
   padding: 50px 0; }
   .info ul {
-    margin: 20px 0;
-    padding: 0 20px; }
+    margin: 20px auto 50px auto;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 395px; }
     .info ul li {
-      display: inline-block;
+      float: left;
       letter-spacing: 2px;
-      margin: 0 10px; }
+      margin: 0 0 0 28px; }
+      .info ul li:first-child {
+        margin: 0;
+        list-style: none; }
+  .info .hours {
+    margin: 0 0 50px 0; }
+  .info a {
+    color: #2b5a4c; }
