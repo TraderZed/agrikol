@@ -28,6 +28,19 @@ body {
       display: inline-block;
       letter-spacing: 2px;
       margin: 0 10px; }
+    .masthead ul.language {
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+      .masthead ul.language li {
+        color: #fff;
+        margin: 0 0 0 10px;
+        padding: 0; }
+        .masthead ul.language li a {
+          color: #fff; }
   .masthead::after {
     content: "";
     background-image: url("../images/masthead.jpg");
