@@ -1,74 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Delius|Grand+Hotel);
+@import url(normalize.css);
 body {
-  background: #f6f7f6;
-  color: #2b5a4c;
-  font-family: 'Bitter', serif;
+  background: #fff;
+  font-family: "Grand Hotel", cursive;
   font-size: 18px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase; }
-
-.masthead {
-  background: rgba(117, 217, 173, 0.7);
-  color: #fff;
-  height: 640px;
-  position: relative; }
-  .masthead h1 {
-    background: url("../images/logo.png") transparent 0 bottom no-repeat;
-    height: 121px;
+  font-style: italic; }
+  body h3 {
+    font-family: "Delius", cursive;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase; }
+  body dl dt {
+    font-family: "Delius", cursive;
+    font-size: 15px;
+    text-transform: uppercase; }
+  body dl dd {
+    margin: 0;
+    padding: 0; }
+  body section {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 250px 0 0 0;
-    position: relative;
-    text-indent: -99999px;
-    width: 362px; }
-  .masthead ul {
-    margin: 20px 0;
-    padding: 0 20px; }
-    .masthead ul li {
-      display: inline-block;
-      letter-spacing: 2px;
-      margin: 0 10px; }
-    .masthead ul.language {
-      font-size: 11px;
-      margin: 0;
-      padding: 0;
+    padding: 100px 20px;
+    position: relative; }
+    body section::after {
+      border: 1px solid #000;
+      content: " ";
       position: absolute;
+      left: 20px;
       right: 20px;
-      top: 20px; }
-      .masthead ul.language li {
-        color: #fff;
-        margin: 0 0 0 10px;
-        padding: 0; }
-        .masthead ul.language li a {
-          color: #fff; }
-  .masthead::after {
-    content: "";
-    background-image: url("../images/masthead.jpg");
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1; }
+      bottom: 0;
+      height: 3px;
+      width: calc(100% - 40px); }
 
-.info {
-  padding: 50px 0; }
-  .info ul {
-    margin: 20px auto 50px auto;
-    overflow: hidden;
-    padding: 0 20px;
-    width: 395px; }
-    .info ul li {
-      float: left;
-      letter-spacing: 2px;
-      margin: 0 0 0 28px; }
-      .info ul li:first-child {
-        margin: 0;
-        list-style: none; }
-  .info .hours {
-    margin: 0 0 50px 0; }
-  .info a {
-    color: #2b5a4c; }
+header {
+  background: #88d7b3;
+  height: 250px; }
+  header h1 {
+    background: blue;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 220px;
+    width: 330px; }
+  header section {
+    padding: 0 20px; }
+    header section::after {
+      display: none; }
+
+.agrikol-info {
+  margin-top: 50px;
+  padding-top: 0;
+  overflow: hidden; }
+  .agrikol-info .agrikol-info-hours {
+    float: left;
+    margin-top: 100px;
+    width: 48%; }
+  .agrikol-info .agrikol-info-location,
+  .agrikol-info .agrikol-info-reservations,
+  .agrikol-info .agrikol-info-description {
+    border: 1px solid #000;
+    float: right;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    width: 48%; }
+    .agrikol-info .agrikol-info-location::before,
+    .agrikol-info .agrikol-info-reservations::before,
+    .agrikol-info .agrikol-info-description::before {
+      border: 1px solid #000;
+      content: " ";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      height: calc(100% - 10px);
+      width: calc(100% - 10px); }
+
+.agrikol-drinks,
+.agrikol-menu {
+  overflow: hidden; }
+  .agrikol-drinks dl,
+  .agrikol-menu dl {
+    float: left;
+    width: 48%; }
+    .agrikol-drinks dl:nth-child(odd),
+    .agrikol-menu dl:nth-child(odd) {
+      margin-right: 4%; }
+
+.agrikol-menu dl {
+  text-align: right; }
+  .agrikol-menu dl h3 {
+    text-align: left; }
+  .agrikol-menu dl dt {
+    font-family: "Grand Hotel", cursive;
+    font-size: 18px;
+    float: left;
+    text-transform: none; }
+  .agrikol-menu dl dd {
+    margin-bottom: 5px; }

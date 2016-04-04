@@ -1,87 +1,121 @@
-body {
-  background: #f6f7f6;
-  color: #2b5a4c;
-  font-family: 'Bitter', serif;
-  font-size: 18px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
+@import url(https://fonts.googleapis.com/css?family=Delius|Grand+Hotel);
+@import "normalize.css";
 
-.masthead {
-  background: rgba(117, 217, 173, .7);
-  color: #fff;
-  height: 640px;
-  position: relative;
-  h1 {
-    background: url('../images/logo.png') transparent 0 bottom no-repeat;
-    height: 121px;
-    margin: 0 auto;
-    padding: 250px 0 0 0;
-    position: relative;
-    text-indent: -99999px;
-    width: 362px;
+$delius: 'Delius', cursive;
+$grand: 'Grand Hotel', cursive;
+
+body {
+  background: #fff;
+  font-family: $grand;
+  font-size: 18px;
+  font-style: italic;
+
+  h3 {
+    font-family: $delius;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
   }
-  ul {
-    margin: 20px 0;
-    padding: 0 20px;
-    li {
-      display: inline-block;
-      letter-spacing: 2px;
-      margin: 0 10px;
+  dl {
+    dt {
+      font-family: $delius;
+      font-size: 15px;
+      text-transform: uppercase;
     }
-    &.language {
-      font-size: 11px;
+    dd {
       margin: 0;
       padding: 0;
-      position: absolute; right: 20px; top: 20px;
-      li {
-        color: #fff;
-        margin: 0 0 0 10px;
-        padding: 0;
-        a {
-          color: #fff;
-        }
-      }
     }
   }
-  &::after {
-    content: "";
-    background-image: url('../images/masthead.jpg');
-    background-position: center center;
-    background-size: cover;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+  section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    position: relative;
+    &::after {
+      border: 1px solid #000;
+      content: " ";
+      position: absolute; left: 20px; right: 20px; bottom: 0;
+      height: 3px;
+      width: calc(100% - 40px);
+    }
   }
 }
 
-.info {
-  padding: 50px 0;
-  ul {
-    margin: 20px auto 50px auto;
-    overflow: hidden;
+header {
+  background: #88d7b3;
+  height: 250px;
+  h1 {
+    background: blue;
+    height: 170px;
+    margin: 0;
+    padding: 0;
+    position: absolute; top: 220px;
+    width: 330px;
+  }
+  section {
     padding: 0 20px;
-    width: 395px;
-    li {
-      float: left;
-      letter-spacing: 2px;
-      margin: 0 0 0 28px;
-      &:first-child {
-        margin: 0;
-        list-style: none;
-      }
+    &::after {
+      display: none;
     }
   }
-  .hours {
-    margin: 0 0 50px 0;
+}
+
+.agrikol-info {
+  margin-top: 50px;
+  padding-top: 0;
+  overflow: hidden;
+  .agrikol-info-hours {
+    float: left;
+    margin-top: 100px;
+    width: 48%;
   }
-  a {
-    color: #2b5a4c;
+  .agrikol-info-location,
+  .agrikol-info-reservations,
+  .agrikol-info-description {
+    border: 1px solid #000;
+    float: right;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    width: 48%;
+    &::before {
+      border: 1px solid #000;
+      content: " ";
+      position: absolute; left: 4px; top: 4px;
+      height: calc(100% - 10px);
+      width: calc(100% - 10px);
+    }
+  }
+}
+
+.agrikol-drinks,
+.agrikol-menu {
+  overflow: hidden;
+  dl {
+    float: left;
+    width: 48%;
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+  }
+}
+
+.agrikol-menu {
+  dl {
+    text-align: right;
+    h3 {
+      text-align: left;
+    }
+    dt {
+      font-family: $grand;
+      font-size: 18px;
+      float: left;
+      text-transform: none;
+    }
+    dd {
+      margin-bottom: 5px;
+    }
   }
 }
