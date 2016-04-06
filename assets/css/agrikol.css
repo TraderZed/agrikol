@@ -62,10 +62,10 @@ header {
     border: 1px solid #000;
     float: right;
     margin: 0 0 20px 0;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     text-align: center;
-    width: 48%; }
+    width: 47%; }
     .agrikol-info .agrikol-info-location::before,
     .agrikol-info .agrikol-info-reservations::before,
     .agrikol-info .agrikol-info-description::before {
@@ -87,6 +87,34 @@ header {
     .agrikol-drinks dl:nth-child(odd),
     .agrikol-menu dl:nth-child(odd) {
       margin-right: 4%; }
+
+.agrikol-drinks .agrikol-drinks-menu {
+  float: left;
+  width: 43%; }
+  .agrikol-drinks .agrikol-drinks-menu dl {
+    float: none;
+    width: auto; }
+  .agrikol-drinks .agrikol-drinks-menu .drink-price {
+    float: right; }
+  .agrikol-drinks .agrikol-drinks-menu .drink-description {
+    margin-bottom: 30px; }
+
+.agrikol-drinks .agrikol-drinks-feature {
+  border: 1px solid #000;
+  float: right;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 47%; }
+  .agrikol-drinks .agrikol-drinks-feature::before {
+    border: 1px solid #000;
+    content: " ";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px); }
 
 .agrikol-menu dl {
   text-align: right; }
