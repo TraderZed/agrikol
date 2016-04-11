@@ -46,6 +46,8 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     position: relative; }
+    body section a {
+      color: #000; }
     body section::after {
       border: 1px solid #000;
       content: " ";
@@ -113,6 +115,7 @@ header {
     .agrikol-info .agrikol-info-description::before {
       border: 1px solid #000;
       content: " ";
+      pointer-events: none;
       position: absolute;
       left: 4px;
       top: 4px;

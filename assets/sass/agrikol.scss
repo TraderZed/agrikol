@@ -64,6 +64,9 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     position: relative;
+    a {
+      color: #000;
+    }
     &::after {
       border: 1px solid #000;
       content: " ";
@@ -135,6 +138,7 @@ header {
     &::before {
       border: 1px solid #000;
       content: " ";
+      pointer-events: none;
       position: absolute; left: 4px; top: 4px;
       height: calc(100% - 10px);
       width: calc(100% - 10px);
