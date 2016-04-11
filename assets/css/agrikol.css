@@ -72,6 +72,23 @@ header {
     top: 220px;
     text-indent: -99999px;
     width: 330px; }
+  header .language {
+    font-family: "Delius", cursive;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+    header .language li {
+      display: inline-block;
+      letter-spacing: 2px;
+      margin: 0 10px;
+      color: #fff;
+      margin: 0 0 0 10px;
+      padding: 0; }
+      header .language li a {
+        color: #fff; }
   header section {
     padding: 0 20px; }
     header section::after {
