@@ -1,11 +1,28 @@
 var gulp = require('gulp');
 var haml = require('gulp-haml');
 var sass = require('gulp-sass');
+var coffee = require('gulp-coffee');
+var gutil = require('gulp-util');
+var imageop = require('gulp-image-optimization');
 
 gulp.task('haml', function () {
   gulp.src('./*.haml')
     .pipe(haml())
     .pipe(gulp.dest('./'));
+});
+
+gulp.task('images', function(cb) {
+    gulp.src(['assets/images/**/*.png','assets/images/**/*.jpg','assets/images/**/*.gif','assets/images/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('public/assets/images')).on('end', cb).on('error', cb);
+});
+
+gulp.task('coffee', function() {
+  gulp.src('assets/javascripts/*.coffee')
+    .pipe(coffee({bare: true}).on('error', gutil.log))
+    .pipe(gulp.dest('./assets/js/'));
 });
 
 gulp.task('styles', function() {
@@ -18,4 +35,5 @@ gulp.task('styles', function() {
 gulp.task('default', function() {
   gulp.watch('./assets/sass/*.scss',['styles']);
   gulp.watch('./*.haml',['haml']);
+  gulp.watch('./assets/javascripts/*.coffee', ['coffee']);
 });
